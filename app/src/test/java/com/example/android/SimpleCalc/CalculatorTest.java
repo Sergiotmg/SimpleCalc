@@ -55,6 +55,12 @@ public class CalculatorTest {
         //true si test ok
     }
 
+    @Test
+    public void addTwoNumbersNegativa() {
+        double resultAdd = mCalculator.sub(2d, 1d);
+        assertThat(resultAdd, is(equalTo(1d)));
+    }
+
 
 
 }
