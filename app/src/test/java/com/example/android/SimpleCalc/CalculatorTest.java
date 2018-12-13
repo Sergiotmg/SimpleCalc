@@ -17,6 +17,7 @@
 package com.example.android.SimpleCalc;
 
 import android.test.suitebuilder.annotation.SmallTest;
+import android.widget.EditText;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -34,8 +35,12 @@ import static org.junit.Assert.assertThat;
 @RunWith(JUnit4.class)
 @SmallTest // es una clase unitaria que no necesita dependencias de otras clases, solo se llama
 //a la clase calculator
-public class CalculatorTest {
 
+
+
+public class CalculatorTest {
+    /*private EditText mOperandTwoEditText;
+    mOperandTwoEditText = findViewById(R.id.operand_two_edit_text);*/
     private Calculator mCalculator;
 
     /**
@@ -99,6 +104,15 @@ public class CalculatorTest {
         double resultDiv = mCalculator.div(32d,0);
         assertThat(resultDiv, is(equalTo(Double.POSITIVE_INFINITY)));
     }
+
+    /*@Test
+    public void divByZeroThrows() {
+        //double resultDiv = mCalculator.div(32d,0);
+        if (operandTwo == 0) {
+            throw new IllegalArgumentException("Argument 'divisor' is 0");
+        }
+    }*/
+
 
 
 }
