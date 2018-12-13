@@ -40,7 +40,7 @@ public class CalculatorTest {
     /**
      * Set up the environment for testing
      */
-    @Before
+    @Before // antes de empezar a hacer los test
     public void setUp() {
         mCalculator = new Calculator();
     }
@@ -52,6 +52,7 @@ public class CalculatorTest {
     public void addTwoNumbers() {
         double resultAdd = mCalculator.add(1d, 1d);
         assertThat(resultAdd, is(equalTo(2d)));// asegurante que()
+        //true si test ok
     }
 
 
