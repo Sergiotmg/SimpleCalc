@@ -42,6 +42,8 @@ public class Calculator {
      * Divide operation
      */
     public double div(double firstOperand, double secondOperand) {
+        if (secondOperand==0)
+            throw new IllegalArgumentException("You cannot divide per zero");
         return firstOperand / secondOperand;
     }
 
